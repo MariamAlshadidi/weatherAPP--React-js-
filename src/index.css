@@ -1,13 +1,178 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'montseraat', sans-serif;
+}
+.app {
+  background-image: url('./assets/c2.jpg');
+  background-size: cover;
+  background-position:bottom ;
+  transition: 0.4 ease-out;
+}
+.app.warm{
+  background-image: url('./assets/s5.jpg');
+}
+main{
+  min-height: 100vh;
+/*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.10)) ;*/
+padding: 25px;
+}
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+.search-box .search-bar{
+  display: block;
+  width: 100%;
+  padding: 15px;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0px 0px 16px 16px;
+  margin-top: -25px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  color: #eee;
+  font-size: 20px;
+  transition: 0.4s ease;
+}
+.search-box .search-bar:focus{
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.location-box .location {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  margin-top: 5px;
+}
+.location-box .date {
+  font-size: 20px;
+  font-family: 300;
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+.weather-box {
+  text-align: center;
+  margin-top: 5px;
+
+}
+.weather-box .degree{
+  position: relative;
+  top: -107px;
+  font-size: 35px;
+  font-weight: lighter;
+  left: 65px;
+  text-shadow: 2px 3px rgba(50, 50, 70, 0.5); 
+}
+.temp {
+  display: inline-block;
+  background-color: rgba(128, 128, 128, 0.3);
+  margin: 15px auto;
+  border-radius: 16px;
+  font-size: 120px;
+  color: #fff;
+  font-weight: 300;
+  padding: 5px auto;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5); 
+  text-align: center;
+  box-shadow: 3px 6px rgba(50, 50, 70, 0.2);  
+  width: 67%;
+  max-height: 200px;
+}
+.weather-box  .temp-main{
+  padding: 5px auto;
+  position: relative;
+  top: 35px;
+  max-width: 190px;
+}
+.weather-box .temp-max,
+.weather-box .temp-min{
+  font-size: 20px;
+  position: relative;
+  top: -220px;
+  font-weight: lighter;
+  left: 78px;
+  text-shadow: 2px 3px rgba(50, 50, 70, 0.5); 
+}
+.weather-box .img img{
+  max-width: 20px;
+  min-height:40px;
+  color: #fff;
+  margin-right: 2px;
+  position: relative;
+  top: -150px;
+  left: 59px;
+}
+.weather-box .weather-name{
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+position: relative;
+top : -140px;
+}
+.weather-box .shp {
+  display: flex;
+  width: 80%;
+  position: relative;
+  top : -60px;
+  text-align: center;
+  justify-content: center;
+align-items: center;
+left: 14%;
+}
+.weather-box .shp img{
+  max-width: 30px;
+  min-height:50px;
+
+
+}
+.weather-box .weather{
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+  font-size: 19px;
+  font-weight:bold;
+  color: #fff;
+  margin-right: 30px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@media only screen and  (min-width: 600px){
+  .temp {
+ width : 30%;
+   }
+   .weather-box .shp {
+  left: 10%;
+  }
+ }
+ 
+ 
+
+@media only screen and  (min-width: 900px){
+ .temp {
+width : 25%;
+  }
 }
+@media only screen and  (max-width: 405px){
+  .weather-box .weather{
+    font-size: 16px;
+  }
+ 
+ }
+
+
+
+
+
+
+
+/*/* <div className="weather"> {Math.round(weather.main.temp_max)}°c</div>
+            <div className="weather"> {Math.round(weather.main.temp_min)}°c</div>*/
